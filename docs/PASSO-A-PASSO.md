@@ -243,7 +243,8 @@ Configurações do workflow: fuso **America/Sao_Paulo**, salvar execuções de s
 
 Deixe uma **nota adesiva** no canvas explicando como testar (próxima etapa).
 
-> 💡 O n8n desta conta está conectado ao Claude. Quando a credencial do Facebook Graph e a do Gmail estiverem criadas no n8n, dá para pedir: **"monte o workflow do publicador da Lotti no n8n, desativado"**. O Claude monta e valida o fluxo, sem nunca ver o token.
+> ✅ **Já criado:** o workflow **"Instagram · Publicador Lotti"** está no n8n (desligado), com fuso America/Sao_Paulo, usando as credenciais "Facebook Graph account" e "Gmail account" e a tabela própria `instagram_publicacoes_lotti`.
+> **Falta só:** trocar `ig_user_id` no nó **Config** pelo número da conta da Lotti (Etapa 3.6). Enquanto estiver `PREENCHER...`, o workflow para com erro de propósito e não publica nada.
 
 ---
 

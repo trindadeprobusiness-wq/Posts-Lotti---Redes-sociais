@@ -1,0 +1,3 @@
+Coloque aqui os arquivos destas peças, com estes nomes:
+
+18:00 · Carrossel · id 33 → CARROSSEL-33_<assunto-curto>_slide-01.jpg … CARROSSEL-33_<assunto-curto>_slide-NN.jpg  (2 a 10 slides, 1080x1350)

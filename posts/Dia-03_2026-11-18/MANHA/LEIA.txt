@@ -1,0 +1,4 @@
+Coloque aqui os arquivos destas peças, com estes nomes:
+
+10:00 · Story     · id 07 → STORY-07_<assunto-curto>.jpg  (1080x1920)  ou .mp4
+12:00 · Reels     · id 08 → REELS-08_<assunto-curto>.mp4  (1080x1920, 15–30 s, com faixa de áudio)

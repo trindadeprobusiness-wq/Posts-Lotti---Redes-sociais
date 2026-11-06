@@ -1,0 +1,21 @@
+{
+  "projeto": "Lotti",
+  "slug": "lotti",
+  "conta_instagram": "@PREENCHER",
+  "github_usuario": "trindadeprobusiness-wq",
+  "github_repo": "Posts-Lotti---Redes-sociais",
+  "branch": "main",
+  "inicio": "2026-11-16",
+  "dias": 14,
+  "fuso": "America/Sao_Paulo",
+  "utc_offset": "-03:00",
+  "horarios": { "story": "10:00", "feed_manha": "12:00", "feed_tarde": "18:00" },
+  "ciclo": [
+    { "12:00": "Carrossel", "18:00": "Reels" },
+    { "12:00": "Estático",  "18:00": "Carrossel" },
+    { "12:00": "Reels",     "18:00": "Estático" }
+  ],
+  "trocas_de_dia": {},
+  "_trocas_de_dia_exemplo": { "5": 6, "6": 5 },
+  "_comentario": "trocas_de_dia: o dia 5 usa o formato do dia 6 do ciclo e vice-versa. Use quando uma data comemorativa precisar cair num formato específico."
+}

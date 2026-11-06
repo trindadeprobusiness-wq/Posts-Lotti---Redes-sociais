@@ -1,0 +1,4 @@
+Coloque aqui os arquivos destas peças, com estes nomes:
+
+10:00 · Story     · id 10 → STORY-10_<assunto-curto>.jpg  (1080x1920)  ou .mp4
+12:00 · Carrossel · id 11 → CARROSSEL-11_<assunto-curto>_slide-01.jpg … CARROSSEL-11_<assunto-curto>_slide-NN.jpg  (2 a 10 slides, 1080x1350)

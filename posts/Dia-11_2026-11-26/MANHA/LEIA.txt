@@ -1,0 +1,4 @@
+Coloque aqui os arquivos destas peças, com estes nomes:
+
+10:00 · Story     · id 31 → STORY-31_<assunto-curto>.jpg  (1080x1920)  ou .mp4
+12:00 · Estático  · id 32 → ESTATICO-32_<assunto-curto>.jpg  (1080x1350)

@@ -4,8 +4,22 @@ Repositório dos posts do Instagram da Lotti. Guarda as artes, os vídeos e o ca
 
 > ⚠️ Este repositório é **público** (a Meta baixa a mídia por link). Nunca coloque aqui token, senha ou dado de cliente.
 
+## Fluxo de trabalho
+
+```
+1. Briefing (ICP, público, identidade visual)  →  docs/BRIEFING.md
+2. Claude cria o plano e as peças em 2–3 variações  →  estudio/pecas/<id>.json  →  node estudio/render.mjs
+3. Você escolhe uma variação por peça na galeria  →  python3 scripts/instagram.py aprovar 02 B
+4. Calendário validado + push  →  python3 scripts/instagram.py calendario
+5. n8n publica sozinho 10h · 12h · 18h
+```
+
+As variações ficam fora do repositório público (`variacoes/` está no `.gitignore`): só o que foi aprovado vai para `posts/`.
+
 ## Por onde começar
 
+0. 🔑 **[Prompt para o navegador configurar a Meta](docs/PROMPT-META-NAVEGADOR.md)** (token vai direto para o n8n)
+0. 🎯 **[Briefing: o que mandar para criar os posts](docs/BRIEFING.md)**
 1. 📘 **[Passo a passo completo](docs/PASSO-A-PASSO.md)**: Meta, produção, GitHub, n8n, testes e operação.
 2. 📝 [Ficha do projeto](docs/FICHA-DO-PROJETO.md): preencher primeiro.
 3. 📚 [Playbook original](docs/playbook-original.md): o método completo de referência.
@@ -18,6 +32,7 @@ conteudo/plano.csv          as 42 peças: data, horário, formato, tema, status
 conteudo/legendas/<id>.txt  legenda de cada post de feed
 posts/Dia-XX_AAAA-MM-DD/    MANHA (10h + 12h) e TARDE (18h), com LEIA.txt dizendo os nomes dos arquivos
 lotti-instagram.json        calendário gerado (o n8n lê este arquivo; não edite à mão)
+estudio/                    marca.json (cores, fontes, logo), pecas/<id>.json (textos A/B/C) e render.mjs
 n8n/                        código do nó "Escolher peça do slot"
 scripts/instagram.py        plano · calendario · galeria · urls
 PRIVACIDADE.md              política de privacidade usada no app da Meta

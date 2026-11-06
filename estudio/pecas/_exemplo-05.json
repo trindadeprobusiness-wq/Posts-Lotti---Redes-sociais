@@ -1,0 +1,7 @@
+{
+  "id": "05", "formato": "Estático", "slug": "comprar-ou-alugar", "tema": "Comprar ou alugar",
+  "variacoes": {
+    "A": { "estilo": "claro", "hipotese": "comparação lado a lado", "tag": "Comprar x alugar", "titulo": "Não existe resposta *única*", "cartao": { "tipo": "duas_colunas", "esquerda": { "titulo": "Alugar", "itens": ["Mais flexibilidade", "Menos custo de entrada"] }, "direita": { "titulo": "Comprar", "itens": ["Patrimônio próprio", "Liberdade para reformar"] } }, "legenda": "Comprar ou alugar? Depende do seu momento.\n\nComente COMPRAR ou ALUGAR e conte o porquê.\n\n#imoveis #aluguel #casapropria" },
+    "B": { "estilo": "escuro", "hipotese": "pergunta + engajamento", "tag": "Enquete", "titulo": "Você *compraria* ou *alugaria* hoje?", "subtitulo": "Conta pra gente nos comentários.", "legenda": "Você compraria ou alugaria hoje?\n\nComente COMPRAR ou ALUGAR.\n\n#imoveis #aluguel #casapropria" }
+  }
+}

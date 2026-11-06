@@ -7,6 +7,7 @@ Comandos:
   python3 scripts/instagram.py calendario   # lê plano + pastas + legendas e gera <slug>-instagram.json (com validação)
   python3 scripts/instagram.py urls         # depois do push: testa as URLs públicas (jsDelivr) de todas as mídias
   python3 scripts/instagram.py galeria      # gera galeria.html para revisar/aprovar as peças
+  python3 scripts/instagram.py aprovar 02 B # leva a variação B da peça 02 (variacoes/02/B) para posts/ e aprova
 
 Só usa a biblioteca padrão do Python. Pillow e ffprobe são usados se estiverem instalados
 (para conferir tamanho das imagens e dos vídeos).
@@ -293,6 +294,44 @@ def cmd_urls():
     sys.exit(1 if falhas else 0)
 
 
+# ------------------------------------------------------------- aprovar
+def cmd_aprovar(pid: str, letra: str):
+    pid, letra = pid.zfill(2), letra.upper()
+    origem = RAIZ / "variacoes" / pid / letra
+    if not origem.is_dir():
+        sys.exit(f"Não achei {origem.relative_to(RAIZ)}. Rode antes: node estudio/render.mjs {pid}")
+    plano = ler_plano()
+    linha = next((p for p in plano if p["id"] == pid), None)
+    if not linha:
+        sys.exit(f"Peça {pid} não existe no plano.")
+    arquivos = sorted(a for a in origem.iterdir() if a.suffix.lower() in {".jpg", ".jpeg", ".mp4"})
+    pre = f"{PREFIXO[linha['formato']]}-{pid}_"
+    if not arquivos or not all(a.name.startswith(pre) for a in arquivos):
+        sys.exit(f"Os arquivos de {origem.relative_to(RAIZ)} não batem com o formato {linha['formato']} (esperado {pre}...).")
+    destino = pasta_do_dia(int(linha["dia"]), linha["data"]) / subpasta(linha["horario"])
+    destino.mkdir(parents=True, exist_ok=True)
+    for velho in destino.glob(pre + "*"):
+        velho.unlink()
+    for a in arquivos:
+        shutil.copy2(a, destino / a.name)
+    leg = origem / "legenda.txt"
+    if leg.exists() and leg.read_text(encoding="utf-8").strip():
+        (LEGENDAS / f"{pid}.txt").write_text(leg.read_text(encoding="utf-8").strip() + "\n", encoding="utf-8")
+    meta = RAIZ / "estudio" / "pecas" / f"{pid}.json"
+    if meta.exists():
+        m = json.loads(meta.read_text(encoding="utf-8"))
+        for campo in ("tema", "pilar"):
+            if m.get(campo) and not linha.get(campo):
+                linha[campo] = m[campo]
+    linha["status"] = "pronto_para_postar"
+    with PLANO.open("w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=COLUNAS, lineterminator="\n")
+        w.writeheader()
+        w.writerows(plano)
+    print(f"✅ Peça {pid} aprovada com a variação {letra}: {len(arquivos)} arquivo(s) em {destino.relative_to(RAIZ)}")
+    print("   Depois de aprovar as peças, rode: python3 scripts/instagram.py calendario")
+
+
 # ------------------------------------------------------------- galeria
 def cmd_galeria():
     plano = ler_plano()
@@ -338,6 +377,8 @@ if __name__ == "__main__":
         cmd_calendario()
     elif cmd == "urls":
         cmd_urls()
+    elif cmd == "aprovar" and len(sys.argv) == 4:
+        cmd_aprovar(sys.argv[2], sys.argv[3])
     elif cmd == "galeria":
         cmd_galeria()
     else:

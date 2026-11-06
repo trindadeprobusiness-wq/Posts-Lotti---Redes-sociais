@@ -1,0 +1,34 @@
+{
+  "_exemplo": "Arquivo de EXEMPLO do formato. Peças reais ficam em 02.json, 05.json etc.",
+  "id": "02",
+  "formato": "Carrossel",
+  "slug": "erros-ao-comprar-imovel",
+  "tema": "3 erros ao comprar o primeiro imóvel",
+  "pilar": "Educativo",
+  "variacoes": {
+    "A": {
+      "estilo": "claro",
+      "hipotese": "gancho de erro (medo de perder dinheiro)",
+      "capa": { "tag": "Primeiro imóvel", "titulo": "3 erros que *encarecem* a compra do seu primeiro imóvel", "subtitulo": "E como evitar cada um antes de assinar." },
+      "slides": [
+        { "titulo": "Olhar só o valor da parcela", "texto": "A parcela cabe no mês, mas o custo total do financiamento pode ser bem maior que o preço do imóvel." },
+        { "titulo": "Esquecer os custos da compra", "texto": "ITBI, escritura e registro entram na conta *antes* das chaves.", "cartao": { "tipo": "checklist", "itens": ["ITBI", "Escritura", "Registro em cartório", "Avaliação do banco"] } },
+        { "titulo": "Não checar a documentação", "texto": "Matrícula atualizada e certidões do vendedor evitam dor de cabeça depois." }
+      ],
+      "final": { "titulo": "Salve para consultar antes de comprar", "cta": "Ficou com dúvida? Fale com a gente.\n*Link na bio.*" },
+      "legenda": "A parcela coube no mês. E o resto da conta?\n\nNo primeiro imóvel, o que mais pesa costuma ser o que ninguém explicou antes: custo total do financiamento, impostos e documentação.\n\nSalve este carrossel para revisar antes de assinar.\n\n#primeiroimovel #imoveis #financiamentoimobiliario"
+    },
+    "B": {
+      "estilo": "escuro",
+      "hipotese": "gancho de pergunta (curiosidade)",
+      "capa": { "tag": "Antes de assinar", "titulo": "Você sabe quanto *realmente* custa comprar um imóvel?", "subtitulo": "O preço anunciado é só uma parte." },
+      "slides": [
+        { "titulo": "O preço do imóvel", "texto": "É o número que aparece no anúncio. Começa aqui, não termina." },
+        { "titulo": "Os custos da compra", "cartao": { "tipo": "checklist", "itens": ["ITBI", "Escritura", "Registro em cartório", "Avaliação do banco"] } },
+        { "titulo": "O custo do financiamento", "texto": "Juros e seguros ao longo dos anos. Compare o *custo efetivo total*, não só a taxa." }
+      ],
+      "final": { "titulo": "Mande para quem está pensando em comprar", "cta": "*Link na bio* para conversar com a Lotti." },
+      "legenda": "Você sabe quanto realmente custa comprar um imóvel?\n\nO preço do anúncio é só o começo. Tem imposto, cartório e o custo do financiamento.\n\nMande para alguém que está pensando em comprar.\n\n#imoveis #primeiroimovel #casapropria"
+    }
+  }
+}

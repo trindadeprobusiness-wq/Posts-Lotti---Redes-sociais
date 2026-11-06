@@ -1,0 +1,8 @@
+{
+  "id": "01", "formato": "Story", "slug": "checklist-visita", "tema": "Checklist da visita ao imóvel",
+  "variacoes": {
+    "A": { "estilo": "claro", "hipotese": "utilidade direta", "tag": "Checklist", "titulo": "O que olhar na *visita* ao imóvel", "cartao": { "tipo": "checklist", "itens": ["Luz natural e ventilação", "Sinais de umidade", "Pressão da água", "Barulho da rua"] } },
+    "B": { "estilo": "acento", "hipotese": "contraste forte", "pilula": "Salve este story", "titulo": "4 coisas para checar antes de fechar", "cartao": { "tipo": "lista", "itens": ["Luz natural", "Umidade nas paredes", "Pressão da água", "Barulho em horário de pico"] } },
+    "C": { "estilo": "apoio", "hipotese": "cor de apoio", "tag": "Visita ao imóvel", "titulo": "Não saia da visita sem *testar* isto", "subtitulo": "Abra torneiras, chuveiros e janelas." }
+  }
+}

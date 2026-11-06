@@ -1,0 +1,20 @@
+{
+  "_status": "PROVISÓRIO: substituir pelas cores, fontes e logo reais da Lotti quando o briefing chegar",
+  "nome": "Lotti",
+  "arroba": "@lotti",
+  "site": "link na bio",
+  "cores": {
+    "fundo": "#F6F3EE",
+    "texto": "#1B1F24",
+    "acento": "#C8553D",
+    "apoio": "#2F5D62",
+    "cartao": "#FFFFFF"
+  },
+  "fontes": {
+    "titulo": "Inter",
+    "texto": "Inter",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+  },
+  "logo": null,
+  "aviso_legal": ""
+}
